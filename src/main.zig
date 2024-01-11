@@ -11,7 +11,7 @@ pub fn RunningStats(comptime ST: type) type {
     return struct {
         const This = @This();
 
-        n: u64,
+        n: i64,
         min: ST,
         max: ST,
         eta: ST,
@@ -154,13 +154,18 @@ pub fn RunningStats(comptime ST: type) type {
 
 test "make it" {
     const Rs16 = RunningStats(f16);
-    _ = Rs16.new();
+    var a = Rs16.new();
+    a.update(1.0);
     const Rs32 = RunningStats(f32);
-    _ = Rs32.new();
+    var b = Rs32.new();
+    b.update(1.0);
     const Rs64 = RunningStats(f64);
-    _ = Rs64.new();
+    var c = Rs64.new();
+    c.update(1.0);
     const Rs80 = RunningStats(f80);
-    _ = Rs80.new();
+    var d = Rs80.new();
+    d.update(1.0);
     const Rs128 = RunningStats(f128);
-    _ = Rs128.new();
+    var e = Rs128.new();
+    e.update(1.0);
 }
