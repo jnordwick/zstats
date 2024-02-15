@@ -12,6 +12,7 @@ pub fn RunningStats(comptime SampleT: type) type {
         const This = @This();
         pub const Sample = SampleT;
 
+<<<<<<< HEAD
         // is mixed with calculations against negatve numbers so just easier tha i32 or casting a lo9t
         /// number of samples
         n: i64,
@@ -24,6 +25,15 @@ pub fn RunningStats(comptime SampleT: type) type {
         tau: Sample,
         rho: Sample,
         phi: Sample,
+=======
+        n: i64,
+        min: ST,
+        max: ST,
+        eta: ST,
+        tau: ST,
+        rho: ST,
+        phi: ST,
+>>>>>>> 2e75f62d3433b5c8211da9070cbbccdc0742ed49
 
         pub fn new() This {
             return .{
