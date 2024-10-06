@@ -1,0 +1,29 @@
+* Use
+
+This current has:
+
+- a running (online) version for basic mean and variance.
+- a running version with exponential weighting.
+- a running correlation.
+
+* Basis
+
+This is almost a straight rip from Statistics class oflthe python runstats
+package by Grant Jenks:
+
+    [[https://github.com/grantjenks/python-runstats]]
+
+It also includes some other running statistics class from the GNU Statistics
+Library:
+
+    [[https://www.gnu.org/software/gsl/]]
+
+* Future
+
+I want to add the Regression class from runstats and some other algorithms
+from GSL that I need.
+
+* Warnings
+
+This untested code with no optimization thought. Hopefully that will improve,
+but my priorities shifted a little. Help is welcome.
