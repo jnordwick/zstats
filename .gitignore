@@ -1,3 +1,6 @@
-zig-cache
-zig-build
-
+.zig-cache/
+zig-out/
+perf.data
+*.a
+*.o
+main
